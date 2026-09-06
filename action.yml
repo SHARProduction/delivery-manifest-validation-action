@@ -1,0 +1,12 @@
+name: SHAR Production delivery manifest validation
+description: Validate a rights-labelled production delivery manifest in GitHub Actions.
+inputs:
+  manifest:
+    description: Path to the JSON manifest.
+    required: true
+runs:
+  using: node20
+  main: dist/index.mjs
+branding:
+  icon: check-circle
+  color: blue
