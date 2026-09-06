@@ -1,0 +1,14 @@
+name: Verify action
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  valid-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          manifest: fixtures/cleared.json
